@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capibara Punch</title>
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="menu">
+            <div class="menu-time">
+                <h2>Time Left</h2>
+                <h2 id="time-left">0</h2>
+            </div>
+            <div class="menu-score">
+                <h2>Your Score</h2>
+                <h2 id="score">0</h2>
+            </div>
+            <div class="menu-lives">
+                <img src="./src/images/iconcapi.png" alt="foto do jogador" height="45px"> X
+                <h2 id="lifes">3</h2>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-row">
+                <div class="square" id="1"></div>
+                <div class="square" id="2"></div>
+                <div class="square" id="3"></div>
+            </div>
+            <div class="panel-row">
+                <div class="square" id="4"></div>
+                <div class="square" id="5"></div>
+                <div class="square" id="6"></div>
+            </div>
+            <div class="panel-row">
+                <div class="square" id="7"></div>
+                <div class="square" id="8"></div>
+                <div class="square" id="9"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="msg">
+
+        <button onclick="showAlert1()">Mostrar alerta</button>
+        <button onclick="showAlert2()">Mostrar alerta</button>
+
+        <div class="msg-time" id="alert-time">
+            <span class="close-btn" onclick="closeAlert1()">&times;</span>
+            <p class="p-time">O tempo acabou, você acertou: <span id="result-game-time"></span>
+                vezes</p>
+        </div>
+
+        <div class="msg-life" id="alert-lifes">
+            <span class="close-btn" onclick="closeAlert2()">&times;</span>
+            <p class="p-time">Suas vidas acabaram, você acertou: <span id="result-game-life"></span> vezes</p>
+        </div>
+
+    </div>
+
+    <script defer src="./src/scripts/engine.js"></script>
+
+</body>
+
+</html>
