@@ -15,7 +15,7 @@ const state = {
         hitPosition: 0,
         result: 0,
         life: 3,
-        curretTime: 60
+        curretTime: 60,
     },
 
     actions: {
@@ -23,6 +23,13 @@ const state = {
         countDownTimerId: setInterval(countDown, 1000),
     }
 };
+
+function speedUp() {
+    state.values.gameVelocity -= 20;
+    clearInterval(state.actions.timerId);
+
+    state.actions.timerId = setInterval(randomSquare, state.values.gameVelocity);
+}
 
 function playSound(audioName) {
     let audio = new Audio(`./src/audios/${audioName}.m4a`);
@@ -63,6 +70,8 @@ function addListenerHitBox() {
                 state.view.score.textContent = state.values.result;
                 state.values.hitPosition = null;
                 playSound("hit");
+
+                speedUp();
             }
 
             if (state.values.hitPosition !== state.view.enemy) {

@@ -17,6 +17,24 @@
     border-bottom: 5px solid #b0d17e;
 }
 
+@media screen and (max-width: 550px) {
+    .menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 8px;
+        height: 90px;
+        width: 100%;
+        background-color: #000000;
+        color: #ffffff;
+        border-bottom: 5px solid #b0d17e;
+    }
+
+    .menu-lives img {
+        height: 30px;
+    }
+}
+
 .panel {
     margin-top: 1rem;
     display: flex;
@@ -32,9 +50,31 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 550px) {
+    .square {
+        height: 100px;
+        width: 100px;
+        border: 1px solid #000000;
+        background-color: #50916d;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .square {
+        height: 80px;
+        width: 80px;
+        border: 1px solid #000000;
+        background-color: #50916d;
+        cursor: pointer;
+    }
+}
+
 .enemy {
     background-image: url("../images/capivara.png");
     background-size: cover;
+    transition: 0.8s;
+    background-color: #95e2b9;
 }
 
 .menu-lives {
@@ -54,17 +94,36 @@
     margin-top: 1rem;
 }
 
+.btn {
+    display: none;
+}
+
 .msg-time {
     display: none;
     background-color: #f44336;
     padding: 15px;
     position: fixed;
-    height: 60px;
+    height: auto;
     bottom: 50%;
-    right: 500px;
+    right: 30%;
     margin: 15px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 550px) {
+    .msg-time {
+        display: none;
+        background-color: #f44336;
+        padding: 15px;
+        position: fixed;
+        height: auto;
+        bottom: 50%;
+        right: 8%;
+        margin: 15px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .msg-life {
@@ -72,12 +131,27 @@
     background-color: #f44336;
     padding: 15px;
     position: fixed;
-    height: 60px;
+    height: auto;
     bottom: 50%;
-    right: 500px;
+    right: 30%;
     margin: 15px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 550px) {
+    .msg-life {
+        display: none;
+        background-color: #f44336;
+        padding: 15px;
+        position: fixed;
+        height: auto;
+        bottom: 50%;
+        right: 8%;
+        margin: 15px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .close-btn {
